@@ -32,7 +32,7 @@ function buildAddOn(e) {
 
     domainSection.addWidget(
       //label: inbox from:(@*usbank.com ) 
-      CardService.newKeyValue().setBottomLabel('label: inbox from:(@*DOMAIN )')
+      CardService.newKeyValue().setBottomLabel('label: inbox from:@*DOMAIN')
     )
 
     domainArray.forEach((domain) => {
@@ -58,7 +58,7 @@ function buildAddOn(e) {
       if (sender.count < COUNT_CUT_OFF) {
         return;
       }
-      
+
       section.addWidget(
         CardService.newKeyValue()
           .setContent((sender.sender))
